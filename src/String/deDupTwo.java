@@ -5,32 +5,31 @@ public class deDupTwo {
         if (input == null || input.length() == 0) {
             return "";
         }
+        if (input.length() == 1) {
+            return input;
+        }
         int fast = 1;
         int slow = 0;
         StringBuilder dedup = new StringBuilder();
-        StringBuilder result = new StringBuilder();
-        result.append(input.charAt(slow));
+        dedup.append(input.charAt(slow));
         while (fast < input.length()) {
-            if (slow >=0 && input.charAt(fast) == result.charAt(slow)) {
-                while (input.charAt(fast) == result.charAt(slow)) {
+            if (dedup.length() !=0 && input.charAt(fast) == dedup.charAt(slow)) {
+                while (fast < input.length() && input.charAt(fast) == dedup.charAt(slow)) {
                     fast++;
                 }
-                slow--;
-            } else {
-                if (slow < 0){
-                    slow = 0;
+                dedup.deleteCharAt(slow);
+                if (slow > 0) {
+                    slow--;
                 }
-                result.append(input.charAt(fast));
+            } else {
+                dedup.append(input.charAt(fast));
+                slow = dedup.length() - 1;
                 fast++;
-                slow++;
             }
-        }
-        for (int i = 0; i <= slow; i++) {
-            dedup.append(result.charAt(i));
         }
         return dedup.toString();
     }
 
 
-    
+
 }

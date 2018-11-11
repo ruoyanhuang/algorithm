@@ -1,4 +1,4 @@
-import String.deDupTwo;
+import String.strstr;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -61,9 +61,16 @@ class test {
 //        int result = test1.common(new ArrayList<> {12,11,10,9,4,5,6,7,2,3,8}, new int[] {12,11,10,9,4,5,6,7,2,3,8});
 //        System.out.println(result);
 //    }
+//    public static void main(String[] args) {
+//        deDupTwo test1 = new deDupTwo();
+//        String result = test1.deDup("abba");
+//        System.out.println(result);
+//    }
     public static void main(String[] args) {
-            deDupTwo test1 = new deDupTwo();
-            String result = test1.deDup("aababab");
-            System.out.println(result);
-        }
+        strstr test1 = new strstr();
+        int result = test1.strstr("mississippi","issip");
+        System.out.println(result);
+    }
+
+
 }
