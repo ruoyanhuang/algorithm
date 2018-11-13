@@ -1,7 +1,4 @@
-import String.strstr;
-
-import java.util.ArrayList;
-import java.util.Arrays;
+import LeetCode.decodeString;
 
 class test {
 //    public static void main(String[] args) {
@@ -67,8 +64,8 @@ class test {
 //        System.out.println(result);
 //    }
     public static void main(String[] args) {
-        strstr test1 = new strstr();
-        int result = test1.strstr("mississippi","issip");
+        decodeString test1 = new decodeString();
+        String result = test1.decodeString("3[a2[c]]");
         System.out.println(result);
     }
 
