@@ -1,4 +1,4 @@
-import LeetCode.decodeString;
+import LeetCode.mostCommonWord;
 
 class test {
 //    public static void main(String[] args) {
@@ -63,9 +63,15 @@ class test {
 //        String result = test1.deDup("abba");
 //        System.out.println(result);
 //    }
+//    public static void main(String[] args) {
+//        decodeString test1 = new decodeString();
+//        String result = test1.decodeString("3[a2[c]]");
+//        System.out.println(result);
+//    }
     public static void main(String[] args) {
-        decodeString test1 = new decodeString();
-        String result = test1.decodeString("3[a2[c]]");
+        mostCommonWord test1 = new mostCommonWord();
+        String[] banned = new String[]{"hit"};
+        String result = test1.mostCommonWord("Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. ", banned);
         System.out.println(result);
     }
 
