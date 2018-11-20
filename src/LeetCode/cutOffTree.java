@@ -44,10 +44,18 @@ public class cutOffTree {
         if (forest.get(row).get(col) == end) {
             return distance;
         }
-        if (row > 0 && forest.get(row-1).get(col) > 0) {
+        if (row > 0 && forest.get(row - 1).get(col) > 0) {
             bfs(row - 1, col, end, forest, ++distance);
         }
-        if (row < forest.size() - 1 && )
+        if (row < forest.size() - 1 && forest.get(row + 1).get(col) > 0) {
+            bfs(row + 1, col, end, forest, ++distance);
+        }
+        if (col > 0 && forest.get(row).get(col - 1) > 0) {
+            bfs(row, col - 1, end, forest, ++distance);
+        }
+        if (col < forest.get(row).size() - 1 && forest.get(row).get(col + 1) > 0) {
+            bfs(row, col + 1, end, forest, ++distance);
+        }
         return -1;
     }
 }
