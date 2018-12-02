@@ -1,4 +1,6 @@
-import LeetCode.mostCommonWord;
+import LeetCode.DP.hotel;
+
+import java.util.List;
 
 class test {
 //    public static void main(String[] args) {
@@ -68,10 +70,15 @@ class test {
 //        String result = test1.decodeString("3[a2[c]]");
 //        System.out.println(result);
 //    }
+//    public static void main(String[] args) {
+//        mostCommonWord test1 = new mostCommonWord();
+//        String[] banned = new String[]{"hit"};
+//        String result = test1.mostCommonWord("Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. ", banned);
+//        System.out.println(result);
+//    }
     public static void main(String[] args) {
-        mostCommonWord test1 = new mostCommonWord();
-        String[] banned = new String[]{"hit"};
-        String result = test1.mostCommonWord("Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. ", banned);
+        hotel test1 = new hotel();
+        List<Integer> result = test1.hotel(new int[]{50, 100, 150, 200, 250, 300});
         System.out.println(result);
     }
 
