@@ -2,26 +2,41 @@ package String;
 
 public class removeSpace {
     public String removeSpaces(String input) {
-        if (input == null) {
+        if (input == null || input.length() == 0) {
             return "";
         }
-        StringBuilder result = new StringBuilder();
-        int count = 0;
+        char[] target = input.toCharArray();
+        int slow = 0;
         int fast = 0;
-        while (fast < input.length()) {
-            if (input.charAt(fast) == (" ").charAt(0)) {
-                fast++;
-            } else {
-                if (count > 0) {
-                    result.append(" ");
-                }
-                while (fast < input.length() && input.charAt(fast) != (" ").charAt(0)) {
-                    result.append(input.charAt(fast));
+        char space = (" ").charAt(0);
+        while (fast < target.length) {
+            if (fast == 0 && target[fast] == space) {
+                while (target[fast] == space && fast < target.length) {
                     fast++;
                 }
-                count++;
+                if (fast >= target.length) {
+                    return "";
+                }
+            }
+            if (target[fast] != space) {
+                target[slow] = target[fast];
+                slow++;
+                fast++;
+            } else {
+                target[slow] = space;
+                slow++;
+                while (target[fast] == space && fast < target.length) {
+                    fast++;
+                }
             }
         }
-        return result.toString();
+        if (target[slow - 1] == space) {
+            slow--;
+        }
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < slow; i++) {
+            sb.append(target[i]);
+        }
+        return sb.toString();
     }
 }
