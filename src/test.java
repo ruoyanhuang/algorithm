@@ -1,4 +1,4 @@
-import LeetCode.DP.hotel;
+import LeetCode.DP.gametheory;
 
 import java.util.List;
 
@@ -76,9 +76,24 @@ class test {
 //        String result = test1.mostCommonWord("Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. Bob hit a ball, the hit BALL flew far after it was hit. ", banned);
 //        System.out.println(result);
 //    }
+//    public static void main(String[] args) {
+//        hotel test1 = new hotel();
+//        List<Integer> result = test1.hotel(new int[]{50, 100, 150, 200, 250, 300});
+//        System.out.println(result);
+//    }
+//    public static void main(String[] args) {
+//        longest test1 = new longest();
+//        String result = test1.longest("abcde", "cbabdfe");
+//        System.out.println(result);
+//    }
+//    public static void main(String[] args) {
+//        expression test1 = new expression();
+//        double result = test1.largestexpression(new double[]{-2, -3, -4, -5});
+//        System.out.println(result);
+//    }
     public static void main(String[] args) {
-        hotel test1 = new hotel();
-        List<Integer> result = test1.hotel(new int[]{50, 100, 150, 200, 250, 300});
+        gametheory test1 = new gametheory();
+        int result = test1.greedystrategy(new int[]{5});
         System.out.println(result);
     }
 
