@@ -93,7 +93,7 @@ class test {
 //    }
     public static void main(String[] args) {
         gametheory test1 = new gametheory();
-        int result = test1.greedystrategy(new int[]{5});
+        int result = test1.greedystrategy(new int[]{5, 2, 1, 4, 3});
         System.out.println(result);
     }
 
