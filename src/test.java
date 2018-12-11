@@ -1,5 +1,6 @@
-import LeetCode.DP.gametheory;
+import DFS.Restore;
 
+import java.util.Arrays;
 import java.util.List;
 
 class test {
@@ -91,10 +92,15 @@ class test {
 //        double result = test1.largestexpression(new double[]{-2, -3, -4, -5});
 //        System.out.println(result);
 //    }
+//    public static void main(String[] args) {
+//        gametheory test1 = new gametheory();
+//        int result = test1.greedystrategy(new int[]{5, 2, 1, 4, 3});
+//        System.out.println(result);
+//    }
     public static void main(String[] args) {
-        gametheory test1 = new gametheory();
-        int result = test1.greedystrategy(new int[]{5, 2, 1, 4, 3});
-        System.out.println(result);
+        Restore test1 = new Restore();
+        List<String> result = test1.restore("25525511135");
+        System.out.println(Arrays.toString(result.toArray()));
     }
 
 
