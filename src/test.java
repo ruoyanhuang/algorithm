@@ -1,4 +1,4 @@
-import DFS.Restore;
+import LeetCode.Amazon.coinChange;
 
 import java.util.Arrays;
 import java.util.List;
@@ -97,10 +97,15 @@ class test {
 //        int result = test1.greedystrategy(new int[]{5, 2, 1, 4, 3});
 //        System.out.println(result);
 //    }
+//    public static void main(String[] args) {
+//        Restore test1 = new Restore();
+//        List<String> result = test1.restore("25525511135");
+//        System.out.println(Arrays.toString(result.toArray()));
+//    }
     public static void main(String[] args) {
-        Restore test1 = new Restore();
-        List<String> result = test1.restore("25525511135");
-        System.out.println(Arrays.toString(result.toArray()));
+        coinChange test1 = new coinChange();
+        int result = test1.coinChange(new int[]{277,196,194,358,263,257}, 7477);
+        System.out.println(result);
     }
 
 

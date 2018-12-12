@@ -11,32 +11,20 @@ public class serialize {
             return new String();
         }
         StringBuilder sb = new StringBuilder();
-        Queue<TreeNode> queue = new ArrayDeque<>();
-        queue.offer(root);
-        sb.append(root.key);
-        sb.append(',');
-        while (!queue.isEmpty()) {
-            int size = queue.size();
-            for (int i = 0; i < size; i++) {
-                TreeNode cur = queue.poll();
-                if (cur.left == null) {
-                    sb.append("null,");
-                } else {
-                    sb.append(cur.left.key);
-                    sb.append(',');
-                    queue.offer(cur.left);
-                }
-                if (cur.right == null) {
-                    sb.append("null,");
-                } else {
-                    sb.append(cur.right.key);
-                    sb.append(',');
-                    queue.offer(cur.right);
-                }
-            }
-        }
+        ser(root, sb);
         sb.deleteCharAt(sb.length() - 1);
         return sb.toString();
+    }
+
+    public void ser(TreeNode root, StringBuilder sb) {
+        if (root == null) {
+            sb.append("null,");
+            return;
+        }
+        sb.append(root.key);
+        sb.append(",");
+        ser(root.left, sb);
+        ser(root.right, sb);
     }
 
     public TreeNode deserialize(String data) {
@@ -44,17 +32,19 @@ public class serialize {
             return null;
         }
         String[] str = data.split(",");
-        TreeNode root = new TreeNode(Integer.parseInt(str[0]));
-        recursion(str, 0, root);
-        return root;
+        int[] index = new int[]{0};
+        return recursion(str, index);
     }
 
-    public void recursion(String[] str, int index, TreeNode root) {
-        if (root == null) {
-            return;
+    public TreeNode recursion(String[] str, int[] index) {
+        if (str[index[0]].equals("null") || index[0] == str.length) {
+            return null;
         }
-        if (index + 1 < str.length) {
-
-        }
+        TreeNode root = new TreeNode(Integer.parseInt(str[index[0]]));
+        index[0] = index[0] + 1;
+        root.left = recursion(str, index);
+        index[0] = index[0] + 1;
+        root.right = recursion(str, index);
+        return root;
     }
 }

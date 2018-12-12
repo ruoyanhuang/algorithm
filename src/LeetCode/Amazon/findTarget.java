@@ -11,12 +11,17 @@ public class findTarget {
             return false;
         }
         Set<Integer> set = new HashSet<>();
-        set.add(k - root.key);
-        preorder(root, k, set);
-        return
+        return preorder(root, k, set);
     }
 
     public boolean preorder(TreeNode root, int k, Set<Integer> set) {
-        if ()
+        if (root == null) {
+            return false;
+        }
+        if (set.contains(root.key)) {
+            return true;
+        }
+        set.add(k - root.key);
+        return preorder(root.left, k, set) || preorder(root.right, k, set);
     }
 }
