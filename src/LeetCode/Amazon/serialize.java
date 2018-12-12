@@ -16,20 +16,23 @@ public class serialize {
         sb.append(root.key);
         sb.append(',');
         while (!queue.isEmpty()) {
-            TreeNode cur = queue.poll();
-            if (root.left == null) {
-                sb.append("null,");
-            } else {
-                sb.append(root.left.key);
-                sb.append(',');
-                queue.offer(root.left);
-            }
-            if (root.right == null) {
-                sb.append("null,");
-            } else {
-                sb.append(root.right.key);
-                sb.append(',');
-                queue.offer(root.right);
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode cur = queue.poll();
+                if (cur.left == null) {
+                    sb.append("null,");
+                } else {
+                    sb.append(cur.left.key);
+                    sb.append(',');
+                    queue.offer(cur.left);
+                }
+                if (cur.right == null) {
+                    sb.append("null,");
+                } else {
+                    sb.append(cur.right.key);
+                    sb.append(',');
+                    queue.offer(cur.right);
+                }
             }
         }
         sb.deleteCharAt(sb.length() - 1);
@@ -40,22 +43,18 @@ public class serialize {
         if (data == null || data.length() == 0) {
             return null;
         }
-        TreeNode root = new TreeNode(data.charAt(0));
-        recursion(data, 0, root);
+        String[] str = data.split(",");
+        TreeNode root = new TreeNode(Integer.parseInt(str[0]));
+        recursion(str, 0, root);
         return root;
     }
 
-    public void recursion(String data, int index, TreeNode root) {
-        if (index >= data.length()) {
+    public void recursion(String[] str, int index, TreeNode root) {
+        if (root == null) {
             return;
         }
-        if (2 * index + 1 < data.length()) {
-            root.left = new TreeNode(data.charAt(2 * index + 1));
-            recursion(data, 2 * index + 1, root.left);
-        }
-        if (2 * index + 2 < data.length()) {
-            root.right = new TreeNode(data.charAt(2 * index + 2));
-            recursion(data, 2 * index + 2, root.right);
+        if (index + 1 < str.length) {
+
         }
     }
 }
