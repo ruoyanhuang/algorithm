@@ -32,6 +32,9 @@ public class Restore {
     }
 
     public boolean isValid(String ip, int last, int index) {
+        if (index - last > 1 && ip.charAt(last + 1) == '0') {
+            return false;
+        }
         int i = Integer.parseInt(ip.substring(last + 1, index + 1));
         return i >=0 && i <= 255;
     }
