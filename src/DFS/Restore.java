@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Restore {
     public List<String> restore(String ip) {
-        if (ip == null || ip.length() < 4) {
+        if (ip == null || ip.length() < 4 || ip.length() > 12) {
             return new ArrayList<>();
         }
         List<String> res = new ArrayList<>();

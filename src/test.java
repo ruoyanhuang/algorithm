@@ -1,4 +1,4 @@
-import LeetCode.Amazon.coinChange;
+import DP.largestSquare1;
 
 import java.util.Arrays;
 import java.util.List;
@@ -102,9 +102,14 @@ class test {
 //        List<String> result = test1.restore("25525511135");
 //        System.out.println(Arrays.toString(result.toArray()));
 //    }
+//    public static void main(String[] args) {
+//        coinChange test1 = new coinChange();
+//        int result = test1.coinChange(new int[]{277,196,194,358,263,257}, 7477);
+//        System.out.println(result);
+//    }
     public static void main(String[] args) {
-        coinChange test1 = new coinChange();
-        int result = test1.coinChange(new int[]{277,196,194,358,263,257}, 7477);
+        largestSquare1 test1 = new largestSquare1();
+        int result = test1.largest(new int[][]{{1,1,1,1}, {0,1,1,1}, {1,1,1,1}, {1,1,1,1}});
         System.out.println(result);
     }
 
