@@ -1,4 +1,4 @@
-import DP.largestSquare1;
+import Mock.busPath;
 
 import java.util.Arrays;
 import java.util.List;
@@ -107,9 +107,14 @@ class test {
 //        int result = test1.coinChange(new int[]{277,196,194,358,263,257}, 7477);
 //        System.out.println(result);
 //    }
+//    public static void main(String[] args) {
+//        largestSquare1 test1 = new largestSquare1();
+//        int result = test1.largest(new int[][]{{1,1,1,1}, {0,1,1,1}, {1,1,1,1}, {1,1,1,1}});
+//        System.out.println(result);
+//    }
     public static void main(String[] args) {
-        largestSquare1 test1 = new largestSquare1();
-        int result = test1.largest(new int[][]{{1,1,1,1}, {0,1,1,1}, {1,1,1,1}, {1,1,1,1}});
+        busPath test1 = new busPath();
+        int result = test1.shortestRoute(new int[][]{{1,4,5,9}, {2,6,7,9}}, 4, 7);
         System.out.println(result);
     }
 
