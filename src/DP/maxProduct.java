@@ -9,12 +9,9 @@ public class maxProduct {
         dp[0] = 0;
         dp[1] = 1;
         for (int i = 2; i < dp.length; i++) {
-            int localmax = 1;
+            int localmax = 0;
             for (int j = 0; j < i; j++) {
-                localmax = Math.max(localmax, Math.max(j + 1, dp[j]) * (i - j));
-            }
-            if (i != dp.length - 1) {
-                localmax = Math.max(localmax, i + 1);
+                localmax = Math.max(localmax, Math.max(j, dp[j]) * (i - j));
             }
             dp[i] = localmax;
         }
