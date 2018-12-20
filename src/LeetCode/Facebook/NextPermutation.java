@@ -1,4 +1,4 @@
-package LeetCode.Facebook;
+package LeetCode.FaceBook;
 
 public class NextPermutation {
     public void nextPermutation(int[] nums) {

@@ -1,4 +1,4 @@
-package LeetCode.Facebook;
+package LeetCode.FaceBook;
 
 public class meetingRoom {
     public class Interval {

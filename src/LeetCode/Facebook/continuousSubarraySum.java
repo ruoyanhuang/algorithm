@@ -1,4 +1,4 @@
-package LeetCode.Facebook;
+package LeetCode.FaceBook;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -1,4 +1,4 @@
-package LeetCode.Facebook;
+package LeetCode.FaceBook;
 
 public class validPalindrome2 {
     public boolean validPalindrome(String s) {

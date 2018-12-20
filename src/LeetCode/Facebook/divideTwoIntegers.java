@@ -1,4 +1,4 @@
-package LeetCode.Facebook;
+package LeetCode.FaceBook;
 
 public class divideTwoIntegers {
     public int divide(int dividend, int divisor) {
