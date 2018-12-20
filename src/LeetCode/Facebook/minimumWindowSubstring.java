@@ -1,4 +1,4 @@
-package LeetCode.Facebook;
+package LeetCode.FaceBook;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -34,12 +34,12 @@ public class minimumWindowSubstring {
             }
             fast--;
             while (slow < fast && count == 0) {
+                if (fast - slow + 1 < globalmin) {
+                    start = slow;
+                    end = fast;
+                    globalmin = fast - slow + 1;
+                }
                 if (map.containsKey(s.charAt(slow))) {
-                    if (fast - slow + 1 < globalmin) {
-                        start = slow;
-                        end = fast;
-                        globalmin = fast - slow + 1;
-                    }
                     map.put(s.charAt(slow), map.get(s.charAt(slow)) + 1);
                     if (map.get(s.charAt(slow)) == 1) {
                         count++;

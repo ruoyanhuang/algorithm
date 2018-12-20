@@ -21,17 +21,20 @@ public class BSTtoDoubleLinkedList {
     public Node treeToDoublyList(Node root) {
         Queue<Node> queue = new ArrayDeque<>();
         inOrder(root, queue);
+        if (queue.isEmpty()) {
+            return null;
+        }
         Node dummy = new Node();
         Node head = dummy;
         head.right = queue.poll();
         head = head.right;
         Node cur = dummy;
         while (!queue.isEmpty()) {
-            cur.right = queue.poll();
-            cur = cur.right;
+            cur = queue.poll();
             head.right = cur;
             cur.left = head;
             head = cur;
+            cur = cur.right;
         }
         cur.right = dummy.right;
         dummy.right.left = cur;

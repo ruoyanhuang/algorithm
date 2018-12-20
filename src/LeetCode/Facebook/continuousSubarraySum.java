@@ -8,16 +8,22 @@ public class continuousSubarraySum {
         if (nums == null || nums.length <= 1) {
             return false;
         }
-        if ((nums[0] + nums[1]) % k == 0) return true;
+        k = Math.abs(k);
+        int prefix0 = nums[0];
+        int prefix1 = nums[0] + nums[1];
         Set<Integer> set = new HashSet<>();
-        int prefix = nums[0] + nums[1];
-        set.add(prefix % k);
+        if (k != 0) {
+            if (prefix1 % k == 0) return true;
+            set.add(prefix0 % k);
+        }
         for (int i = 2; i < nums.length; i++) {
-            prefix = prefix + nums[i];
-            if (nums[i] % k != 0 && set.contains(prefix % k)) {
-                return true;
+            prefix1 = prefix1 + nums[i];
+            if (nums[i] == 0 && nums[i - 1] == 0) return true;
+            if (k != 0) {
+                if (set.contains(prefix1 % k)) return true;
+                prefix0 = prefix0 + nums[i - 1];
+                set.add(prefix0 % k);
             }
-            set.add(prefix % k);
         }
         return false;
     }
