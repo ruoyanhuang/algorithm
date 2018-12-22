@@ -26,11 +26,13 @@ public class decodeWays {
                     dp[i] = dp[i - 2];                  // xxxxx 20
                 }
             } else {
-                int j = Integer.parseInt(s.substring(i - 1, i + 1));
+                int m = s.charAt(i - 1) - '0';
+                int n = s.charAt(i) - '0';
+                int j = 10 * m + n;
                 if (j < 10 || j > 26) {
-                    dp[i] = dp[i - 1];                  // xxxxx 31
+                    dp[i] = dp[i - 1];                  // xxxxx3 1
                 } else {
-                    dp[i] = dp[i - 1] + dp[i - 2];      // xxxxx 21 or xxxx2 1
+                    dp[i] = dp[i - 1] + dp[i - 2];      // xxxxx2 1 or xxxx 21
                 }
             }
         }
