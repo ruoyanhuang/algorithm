@@ -15,7 +15,7 @@ public class serializeBST {
         }
         postOrder(root.left, sb);
         postOrder(root.right, sb);
-        sb.append(root.key);
+        sb.append(root.val);
         sb.append(",");
     }
 
@@ -35,7 +35,7 @@ public class serializeBST {
         }
         TreeNode root = new TreeNode(Integer.parseInt(str[index[0]]));
         index[0]--;
-        root.right = helper(str, index, root.key);
+        root.right = helper(str, index, root.val);
         root.left = helper(str, index, min);
         return root;
     }

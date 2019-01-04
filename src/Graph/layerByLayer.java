@@ -21,7 +21,7 @@ public class layerByLayer {
             List<Integer> layer = new ArrayList<>();
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
-                layer.add(node.key);
+                layer.add(node.val);
                 if (node.left != null) {
                     queue.offer(node.left);
                 }

@@ -26,7 +26,7 @@ public class DistanceK {
         int right = recursion(root.right, target, K, res);
         if (left > 0) {
             if (left == K) {
-                res.add(root.key);
+                res.add(root.val);
                 return 0;
             } else {
                 bfs(root.right, K - left - 1, res);
@@ -35,7 +35,7 @@ public class DistanceK {
         }
         if (right > 0) {
             if (right == K) {
-                res.add(root.key);
+                res.add(root.val);
                 return 0;
             } else {
                 bfs(root.left, K - right - 1, res);
@@ -50,7 +50,7 @@ public class DistanceK {
             return;
         }
         if (level == 0) {
-            res.add(root.key);
+            res.add(root.val);
             return;
         }
         Queue<TreeNode> queue = new ArrayDeque<>();
@@ -60,7 +60,7 @@ public class DistanceK {
             for (int i = 0; i < size; i++) {
                 TreeNode cur = queue.poll();
                 if (level == 0) {
-                    res.add(cur.key);
+                    res.add(cur.val);
                 }
                 if (cur.left != null) {
                     queue.offer(cur.left);

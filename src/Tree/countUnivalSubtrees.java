@@ -14,7 +14,7 @@ public class countUnivalSubtrees {
     public boolean isUnival(TreeNode root) {
         if (root == null) {
             return true;
-        } if (root.left != null && root.key != root.left.key || root.right != null && root.key != root.right.key) {
+        } if (root.left != null && root.val != root.left.val || root.right != null && root.val != root.right.val) {
             return false;
         }
         return isUnival(root.left) && isUnival(root.right);

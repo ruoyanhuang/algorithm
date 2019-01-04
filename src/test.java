@@ -1,4 +1,4 @@
-import DP.largestSubMatrixSum;
+import Review1.allAnagram;
 
 import java.util.Arrays;
 import java.util.List;
@@ -127,10 +127,23 @@ class test {
 //        int result = test1.largest(new int[][]{{0,0,0,0},{1,1,1,1},{0,1,1,1},{1,0,1,1}});
 //        System.out.println(result);
 //    }
+//    public static void main(String[] args) {
+//        largestSubMatrixSum test1 = new largestSubMatrixSum();
+//        int result = test1.largest(new int[][]{{2,-1,2,1,-3},{0,-2,-1,2,1},{3,2,1,-3,-2}});
+//        System.out.println(result);
+//    }
+//    public static void main(String[] args) {
+//        surroundedRegions test1 = new surroundedRegions();
+//        char[][] board = new char[][]{{'X','X','X','X'}, {'X','O','O','X'}, {'X','X','O','X'}, {'X','O','X','X'}};
+//        test1.solve(board);
+//        for (int i = 0; i < board.length; i++) {
+//            System.out.println(Arrays.toString(board[i]));
+//        }
+//    }
     public static void main(String[] args) {
-        largestSubMatrixSum test1 = new largestSubMatrixSum();
-        int result = test1.largest(new int[][]{{2,-1,2,1,-3},{0,-2,-1,2,1},{3,2,1,-3,-2}});
-        System.out.println(result);
+        allAnagram test1 = new allAnagram();
+        List<Integer> res = test1.allAnagrams("aa", "aaaaa");
+        System.out.println(Arrays.toString(res.toArray()));
     }
 
 

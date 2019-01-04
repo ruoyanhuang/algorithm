@@ -14,10 +14,10 @@ public class isBST {
         if (root == null) {
             return true;
         }
-        if (root.key < left || root.key > right) {
+        if (root.val < left || root.val > right) {
             return false;
         }
-        return bst(root.left, left, root.key) && bst(root.right, root.key, right);
+        return bst(root.left, left, root.val) && bst(root.right, root.val, right);
     }
 //    public int fib(int k) {
 //        int a = 0;

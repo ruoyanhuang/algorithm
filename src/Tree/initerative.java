@@ -21,7 +21,7 @@ public class initerative {
                 cur = cur.left;
             } else {
                 cur = stack.pollFirst();
-                res.add(cur.key);
+                res.add(cur.val);
                 cur = cur.right;
             }
         }

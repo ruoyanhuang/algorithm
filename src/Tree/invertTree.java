@@ -7,7 +7,7 @@ public class invertTree {
         if (root == null) {
             return null;
         }
-        TreeNode reverse = new TreeNode(root.key);
+        TreeNode reverse = new TreeNode(root.val);
         reverse.left = invertTree(root.right);
         reverse.right = invertTree(root.left);
         return reverse;

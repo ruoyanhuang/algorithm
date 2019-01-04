@@ -30,10 +30,10 @@ public class verticalTraversal {
                 TreeNode curnode = node.poll();
                 int curindex = index.poll();
                 if (map.containsKey(curindex)) {
-                    map.get(curindex).add(curnode.key);
+                    map.get(curindex).add(curnode.val);
                 } else {
                     List<Integer> tmp = new ArrayList<>();
-                    tmp.add(curnode.key);
+                    tmp.add(curnode.val);
                     map.put(curindex, tmp);
                 }
                 min[0] = Math.min(min[0], curindex);

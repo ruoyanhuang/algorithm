@@ -18,7 +18,7 @@ public class serialize {
             sb.append("null,");
             return;
         }
-        sb.append(root.key);
+        sb.append(root.val);
         sb.append(",");
         ser(root.left, sb);
         ser(root.right, sb);

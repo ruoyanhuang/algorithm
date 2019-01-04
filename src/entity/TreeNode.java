@@ -1,10 +1,10 @@
 package entity;
 
 public class TreeNode {
-    public int key;
+    public int val;
     public TreeNode left;
     public TreeNode right;
-    public TreeNode(int key) {
-        this.key = key;
+    public TreeNode(int val) {
+        this.val = val;
     }
 }

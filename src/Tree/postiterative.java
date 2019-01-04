@@ -24,18 +24,18 @@ public class postiterative {
                 } else if (cur.right != null) {
                     stack.offerFirst(cur.right);
                 } else {
-                    res.add(cur.key);
+                    res.add(cur.val);
                     stack.pollFirst();
                 }
             } else if (prev == cur.left) {
                 if (cur.right != null) {
                     stack.offerFirst(cur.right);
                 } else {
-                    res.add(cur.key);
+                    res.add(cur.val);
                     stack.pollFirst();
                 }
             } else {
-                res.add(cur.key);
+                res.add(cur.val);
                 stack.pollFirst();
             }
             prev = cur;

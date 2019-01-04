@@ -17,7 +17,7 @@ public class preiterative {
         stack.offerFirst(root);
         while (!stack.isEmpty()) {
             TreeNode node = stack.pollFirst();
-            res.add(node.key);
+            res.add(node.val);
             if (node.right != null) {
                 stack.offerFirst(node.right);
             }

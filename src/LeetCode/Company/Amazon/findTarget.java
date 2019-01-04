@@ -18,10 +18,10 @@ public class findTarget {
         if (root == null) {
             return false;
         }
-        if (set.contains(root.key)) {
+        if (set.contains(root.val)) {
             return true;
         }
-        set.add(k - root.key);
+        set.add(k - root.val);
         return preorder(root.left, k, set) || preorder(root.right, k, set);
     }
 }
