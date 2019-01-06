@@ -1,4 +1,4 @@
-import Review1.allAnagram;
+import Mock.compareTwoString;
 
 import java.util.Arrays;
 import java.util.List;
@@ -140,10 +140,40 @@ class test {
 //            System.out.println(Arrays.toString(board[i]));
 //        }
 //    }
+//    public static void main(String[] args) {
+//        allAnagram test1 = new allAnagram();
+//        List<Integer> res = test1.allAnagrams("aa", "aaaaa");
+//        System.out.println(Arrays.toString(res.toArray()));
+//    }
+//    public static void main(String[] args) {
+//        labelTree test1 = new labelTree();
+//        LabelTreeNode a = new LabelTreeNode("a");
+//        LabelTreeNode b = new LabelTreeNode("b");
+//        LabelTreeNode c = new LabelTreeNode("c");
+//        LabelTreeNode e = new LabelTreeNode("e");
+//        LabelTreeNode f = new LabelTreeNode("f");
+//        LabelTreeNode g = new LabelTreeNode("g");
+//        LabelTreeNode h = new LabelTreeNode("h");
+//        LabelTreeNode i = new LabelTreeNode("i");
+//
+//        h.label = "bad";
+//        i.label = "good";
+//        f.label = "good";
+//        g.label = "good";
+//
+//        a.left = b;
+//        a.right = c;
+//        b.left = e;
+//        b.right = f;
+//        e.left = h;
+//        e.right = i;
+//        c.right = g;
+//        System.out.println(new labelTree().findLargestSubTree(a));
+//    }
     public static void main(String[] args) {
-        allAnagram test1 = new allAnagram();
-        List<Integer> res = test1.allAnagrams("aa", "aaaaa");
-        System.out.println(Arrays.toString(res.toArray()));
+        compareTwoString test1 = new compareTwoString();
+        boolean res = test1.isTwoStringSame("aab//c", "aa/c");
+        System.out.println(res);
     }
 
 
