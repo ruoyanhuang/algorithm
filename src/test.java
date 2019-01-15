@@ -1,4 +1,4 @@
-import Mock.compareTwoString;
+import LeetCode.Company.GoldmanSachs.primeFactor;
 
 import java.util.Arrays;
 import java.util.List;
@@ -170,11 +170,31 @@ class test {
 //        c.right = g;
 //        System.out.println(new labelTree().findLargestSubTree(a));
 //    }
+//    public static void main(String[] args) {
+//        compareTwoString test1 = new compareTwoString();
+//        boolean res = test1.isTwoStringSame("aab//c", "aa/c");
+//        System.out.println(res);
+//    }
+//    public static void main(String[] args) {
+//        knightProbabilityInChessboard test1 = new knightProbabilityInChessboard();
+//        double res = test1.knightProbability(8, 3, 6, 4);
+//        System.out.println(res);
+//    }
+//    public static void main(String[] args) {
+//        stringDistance test1 = new stringDistance();
+//        double res = test1.wordsDistance("asdfghj", "asd", "hj");
+//        System.out.println(res);
+//    }
     public static void main(String[] args) {
-        compareTwoString test1 = new compareTwoString();
-        boolean res = test1.isTwoStringSame("aab//c", "aa/c");
+        primeFactor test1 = new primeFactor();
+        List<Integer> res = test1.findPrimeFactor(2520);
         System.out.println(res);
     }
+//    public static void main(String[] args) {
+//        secondSmallest test1 = new secondSmallest();
+//        int res = test1.findSecondSmallest(new int[]{1,3,1,1,7,2,5,9,4,8});
+//        System.out.println(res);
+//    }
 
 
 }
