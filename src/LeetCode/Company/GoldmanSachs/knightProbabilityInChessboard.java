@@ -5,34 +5,27 @@ public class knightProbabilityInChessboard {
 
     public double knightProbability(int N, int K, int r, int c) {
         double[][][] dp = new double[N][N][K + 1];
-        double ans = 0;
-        for (int k = 0; k <= K; k++) {
+        dp[r][c][0] = 1;
+        for (int k = 1; k <= K; k++) {
             for (int i = 0; i < N; i++) {
                 for (int j = 0; j < N; j++) {
-                    if (k == 0) {
-                        if (i == r && j == c) {
-                            dp[i][j][k] = 1;
-                        } else {
-                            dp[i][j][k] = 0;
-                        }
-                    } else {
-                        for (int[] direction : directions) {
-                            int row = i + direction[0];
-                            int col = j + direction[1];
-                            if (!isOutOfBound(row, col, N, N)) {
-                                dp[i][j][k] += 0.125 * dp[row][col][k - 1];
-                            }
+                    for (int[] direction : directions) {
+                        int row = i + direction[0];
+                        int col = j + direction[1];
+                        if (!isOutOfBound(row, col, N, N)) {
+                            dp[i][j][k] += dp[row][col][k - 1] * 0.125;
                         }
                     }
                 }
             }
         }
+        double res = 0;
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
-                ans += dp[i][j][K];
+                res += dp[i][j][K];
             }
         }
-        return ans;
+        return res;
     }
 
     private boolean isOutOfBound(int x, int y, int row, int col) {

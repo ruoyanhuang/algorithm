@@ -10,17 +10,16 @@ public class stringCompression {
             } else {
                 int count = 1;
                 while (fast < chars.length && chars[fast] == chars[fast - 1]) {
-                    count++;
                     fast++;
+                    count++;
                 }
-                String digit = String.valueOf(count);
-                for (int i = 0; i < digit.length(); i++) {
-                    chars[++slow] = digit.charAt(i);
+                String s = String.valueOf(count);
+                for (int i = 0; i < s.length(); i++) {
+                    chars[++slow] = s.charAt(i);
                 }
                 if (fast < chars.length) {
-                    chars[++slow] = chars[fast];
+                    chars[++slow] = chars[fast++];      //"aa22" --> "a23" should be "a222"
                 }
-                fast++;
             }
         }
         return slow + 1;

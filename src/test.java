@@ -1,4 +1,4 @@
-import LeetCode.Company.GoldmanSachs.primeFactor;
+import LeetCode.Company.GoldmanSachs.stringCompression;
 
 import java.util.Arrays;
 import java.util.List;
@@ -185,16 +185,21 @@ class test {
 //        double res = test1.wordsDistance("asdfghj", "asd", "hj");
 //        System.out.println(res);
 //    }
-    public static void main(String[] args) {
-        primeFactor test1 = new primeFactor();
-        List<Integer> res = test1.findPrimeFactor(2520);
-        System.out.println(res);
-    }
+//    public static void main(String[] args) {
+//        primeFactor test1 = new primeFactor();
+//        List<Integer> res = test1.findPrimeFactor(2520);
+//        System.out.println(res);
+//    }
 //    public static void main(String[] args) {
 //        secondSmallest test1 = new secondSmallest();
 //        int res = test1.findSecondSmallest(new int[]{1,3,1,1,7,2,5,9,4,8});
 //        System.out.println(res);
 //    }
+    public static void main(String[] args) {
+        stringCompression test1 = new stringCompression();
+        int res = test1.compress(new char[]{'a','a','b','b','c','c','c'});
+        System.out.println(res);
+    }
 
 
 }

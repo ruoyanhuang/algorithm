@@ -2,19 +2,19 @@ package LeetCode.Company.GoldmanSachs;
 
 public class minimumSizeSubarraySum {
     public int minSubArrayLen(int s, int[] nums) {
-        int slow = 0;
-        int fast = 0;
-        int sum = 0;
-        int minLen = Integer.MAX_VALUE;
-        while (fast < nums.length) {
-            while (fast < nums.length && sum < s) {
-                sum += nums[fast++];
-            }
-            while (slow <= fast && sum >= s) {
-                minLen = Math.min(minLen, fast - slow);
-                sum -= nums[slow++];
+        int left = 0;
+        int right = 0;
+        int curSum = 0;
+        int minLen = nums.length + 1;
+        while (right < nums.length) {
+            if (curSum < s) {
+                curSum += nums[right++];
+                while (curSum >= s) {
+                    minLen = Math.min(minLen, right - left);
+                    curSum -= nums[left++];
+                }
             }
         }
-        return minLen == Integer.MAX_VALUE ? 0 : minLen;
+        return minLen == nums.length ? -1 : minLen;
     }
 }

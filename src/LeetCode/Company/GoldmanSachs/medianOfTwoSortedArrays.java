@@ -1,5 +1,9 @@
 package LeetCode.Company.GoldmanSachs;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
 public class medianOfTwoSortedArrays {
 //    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
 //        int sum = nums1.length + nums2.length;
@@ -43,12 +47,12 @@ public class medianOfTwoSortedArrays {
         int m = nums1.length;
         int n = nums2.length;
         if (m > n) {
-            int[] tmp1 = nums1;
+            int[] temp1 = nums1;
             nums1 = nums2;
-            nums2 = tmp1;
-            int tmp2 = m;
+            nums2 = temp1;
+            int temp2 = m;
             m = n;
-            n = tmp2;
+            n = temp2;
         }
         int min = 0;
         int max = m;
@@ -66,7 +70,7 @@ public class medianOfTwoSortedArrays {
                 } else if (j == 0) {
                     leftMax = nums1[i - 1];
                 } else {
-                    leftMax = Math.min(nums1[i - 1], nums2[j - 1]);
+                    leftMax = Math.max(nums1[i - 1], nums2[j - 1]);
                 }
                 if ((m + n) % 2 == 1) {
                     return leftMax;
