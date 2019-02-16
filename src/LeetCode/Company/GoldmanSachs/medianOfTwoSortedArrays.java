@@ -47,19 +47,19 @@ public class medianOfTwoSortedArrays {
         int m = nums1.length;
         int n = nums2.length;
         if (m > n) {
-            int[] temp1 = nums1;
+            int[] tmp1 = nums1;
             nums1 = nums2;
-            nums2 = temp1;
-            int temp2 = m;
+            nums2 = tmp1;
+            int tmp2 = m;
             m = n;
-            n = temp2;
+            n = tmp2;
         }
         int min = 0;
         int max = m;
         while (min <= max) {
             int i = min + (max - min) / 2;
             int j = (m + n + 1) / 2 - i;
-            if (i > min && nums1[i - 1] > nums2[j]) {
+            if (i > min && nums1[i - 1] > nums2 [j]) {
                 max = i - 1;
             } else if (i < max && nums2[j - 1] > nums1[i]) {
                 min = i + 1;

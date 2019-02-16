@@ -10,7 +10,7 @@ public class buyAndSellStock3 {
         int buy2 = Integer.MIN_VALUE;
         int sell2 = 0;
         for (int i = 0; i < prices.length; i++) {
-            buy1 = Math.max(buy1, prices[i]);
+            buy1 = Math.max(buy1, -prices[i]);
             sell1 = Math.max(sell1, prices[i] + buy1);
             buy2 = Math.max(buy2, sell1 - prices[i]);
             sell2 = Math.max(sell2, prices[i] + buy2);

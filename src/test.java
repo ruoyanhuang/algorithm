@@ -1,4 +1,5 @@
-import LeetCode.Company.GoldmanSachs.stringCompression;
+import LeetCode.Company.Amazon.distinctCharacter;
+import entity.TreeNode;
 
 import java.util.Arrays;
 import java.util.List;
@@ -195,10 +196,40 @@ class test {
 //        int res = test1.findSecondSmallest(new int[]{1,3,1,1,7,2,5,9,4,8});
 //        System.out.println(res);
 //    }
+//    public static void main(String[] args) {
+//        stringCompression test1 = new stringCompression();
+//        int res = test1.compress(new char[]{'a','a','b','b','c','c','c'});
+//        System.out.println(res);
+//    }
+//    public static void main(String[] args) {
+//        finalExam test1 = new finalExam();
+//        int res = test1.minCut(0);
+//        System.out.println(res);
+//    }
+//    public static void main(String[] args) {
+//        countUnivalueSubtrees test1 = new countUnivalueSubtrees();
+//        TreeNode a = new TreeNode(5);
+//        TreeNode b = new TreeNode(1);
+//        TreeNode c = new TreeNode(5);
+//        TreeNode d = new TreeNode(5);
+//        TreeNode e = new TreeNode(5);
+//        TreeNode f = new TreeNode(5);
+//        a.left = b;
+//        a.right = c;
+//        b.left = d;
+//        b.right = e;
+//        c.right = f;
+//        int res = test1.univalSubtrees(a);
+//        System.out.println(res);
+//    }
     public static void main(String[] args) {
-        stringCompression test1 = new stringCompression();
-        int res = test1.compress(new char[]{'a','a','b','b','c','c','c'});
-        System.out.println(res);
+        distinctCharacter test1 = new distinctCharacter();
+        List<String> res = test1.allSubstring("abcdkeewrf ", 4);
+        int[] array = new int[]{1,2,3};
+        int[] copy = Arrays.copyOf(array, array.length);
+        copy[0] = 5;
+        System.out.println(Arrays.toString(array));
+        System.out.println(Arrays.toString(copy));
     }
 
 
