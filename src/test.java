@@ -1,4 +1,4 @@
-import LeetCode.Company.Amazon.distinctCharacter;
+import LeetCode.Company.Amazon.Zuma;
 import entity.TreeNode;
 
 import java.util.Arrays;
@@ -222,14 +222,19 @@ class test {
 //        int res = test1.univalSubtrees(a);
 //        System.out.println(res);
 //    }
+//    public static void main(String[] args) {
+//        distinctCharacter test1 = new distinctCharacter();
+//        List<String> res = test1.allSubstring("abcdkeewrf ", 4);
+//        int[] array = new int[]{1,2,3};
+//        int[] copy = Arrays.copyOf(array, array.length);
+//        copy[0] = 5;
+//        System.out.println(Arrays.toString(array));
+//        System.out.println(Arrays.toString(copy));
+//    }
     public static void main(String[] args) {
-        distinctCharacter test1 = new distinctCharacter();
-        List<String> res = test1.allSubstring("abcdkeewrf ", 4);
-        int[] array = new int[]{1,2,3};
-        int[] copy = Arrays.copyOf(array, array.length);
-        copy[0] = 5;
-        System.out.println(Arrays.toString(array));
-        System.out.println(Arrays.toString(copy));
+        Zuma test1 = new Zuma();
+        int[] res = test1.removeSame(new int[]{1,1});
+        System.out.println(Arrays.toString(res));
     }
 
 

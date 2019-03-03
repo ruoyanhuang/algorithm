@@ -2,6 +2,9 @@ package LeetCode.Company.Amazon;
 
 import entity.TreeNode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class constructBST {
     public int construct(int[] array, int x, int y) {
         if (array == null || array.length == 0) {
@@ -30,6 +33,7 @@ public class constructBST {
         } else if (target > root.val) {
             root.right = insert(root.right, target);
         }
+        List<Integer> l = new ArrayList<>();
         return root;
     }
 
